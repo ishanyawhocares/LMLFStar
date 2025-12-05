@@ -170,6 +170,7 @@ def calculate_binding_affinity(smiles, gnina_path, config_path, temp_dir):
         print(f"Running Gnina command: {' '.join(cmd)}")
         result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=env)
         print(f"Gnina output:\n{result.stdout}")
+        # running gnina has significant things
 
         if result.returncode != 0:
             print(f"Gnina error:\n{result.stderr}")
